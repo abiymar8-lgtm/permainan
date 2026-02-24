@@ -95,7 +95,7 @@ function permainan() {
     { pertanyaan: 'Pisang berwarna hijau ketika matang', jawaban: false },
     { pertanyaan: 'Manusia bernafas menggunakan jantung', jawaban: true },
     { pertanyaan: 'Ada jenis ubur-ubur yang abadi', jawaban: true },
-    { pertanyaan: 'Hanya manusia yang memiliki akal', jawaban: true },
+    { pertanyaan: 'CSS adalah bahasa pemograman', jawaban: false },
     { pertanyaan: 'Matahari adalah pusat tata surya', jawaban: true },
     { pertanyaan: 'Air mendidih pada suhu 90°C di permukaan laut', jawaban: false },
     { pertanyaan: 'JavaScript bisa digunakan untuk membuat website interaktif', jawaban: true },
@@ -126,4 +126,47 @@ function permainan() {
 
     mainLagi = confirm('Mau main lagi?')
   }
+}
+function tebakAngka() {
+  let bertanya = true
+  let kalah = 0
+  let menang  = 0
+  let poin = 0
+
+  while (bertanya) {
+    let pemain = prompt('Ketik angka (1-10)')
+
+    if (pemain === null) break
+
+    pemain = Number(pemain)
+
+    if (isNaN(pemain) || pemain < 1 || pemain > 10) {
+      alert('Input harus angka 1–10!')
+      continue
+    }
+
+    let robot = Math.floor(Math.random() * 10) + 1
+
+    if (pemain === robot) {
+      alert(`BENAR! Angka = ${robot}`)
+      menang++
+      poin++
+    } else if (pemain < robot) {
+      alert(`Terlalu kecil! Angka = ${robot}`)
+      kalah++
+      poin--
+    } else {
+      alert(`Terlalu besar! Angka = ${robot}`)
+      kalah++
+      poin--
+    }
+
+    alert(`Poin kamu: ${poin}`)
+    bertanya = confirm('Main lagi?')
+  }
+  alert(
+    `Game selesai! \n\n` +
+    `Kalah: ${kalah} \n` +
+    `Menang: ${menang}`
+    )
 }
