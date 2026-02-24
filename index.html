@@ -11,16 +11,26 @@
     <h1>WELCOME TO MINI GAME</h1>
     <div class="section">
         <div class="block">
-            <h2>Gunting,Batu,Kertas</h2>
+            <h2 class="level">Level <span class="gampang">GAMPANG</span></h2>
+            <h2>Tebak-tebakan</h2>
+            <div class="tombol">
+                <button class="coba" onclick="permainan()">pencet untuk main</button>
+            </div>
+        </div>
+        <div class="block">
+            <h2 class="level">Level <span class="normal">NORMAL</span></h2>
+            <h2>Batu,Gunting,Kertas</h2>
             <div class="tombol">
                 <button class="coba" onclick="mulaiGame()">pencet untuk main</button>
             </div>
         </div>
         <div class="block">
-            <h2>Tebak-tebakan</h2>
+            <h2 class="level">Level <span class="sulit">SULIT</span></h2>
+            <h2>Tebak Angka</h2>
             <div class="tombol">
-                <button class="coba" onclick="permainan()">pencet untuk main</button>
+                <button class="coba" onclick="tebakAngka()">pencet untuk main</button>
             </div>
+        </div>
         </div>
     </div>
     <script src="suit.js"></script>
