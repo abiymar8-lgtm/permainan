@@ -30,6 +30,7 @@ h1 {
   padding: 20px;
   transition: transform 0.5s ease;
   border: 1px solid #000000ff;
+  box-shadow: 0px 5px 20px 5px #0367e1;
 }
 .block:hover {
   transform: scale(1.1);
@@ -59,4 +60,19 @@ h1 {
   color: #fff;
   background: #000;
   transition: background 0.5s, color 0.5s;
+}
+.level {
+  color: #000000ff;
+}
+.gampang {
+  color: #e5ff00ff;
+  text-shadow: 0px 5px 10px #e5ff00ff;
+}
+.normal {
+  color: #1aff00ff;
+  text-shadow: 0px 5px 10px #1aff00ff;
+}
+.sulit {
+  color: #ff0000ff;
+  text-shadow: 0px 5px 10px #ff0000ff;
 }
